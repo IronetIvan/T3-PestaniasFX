@@ -11,6 +11,7 @@ import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import utils.Persona;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -68,7 +69,14 @@ public class ControladoraVentana1 implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 System.out.println(check.isSelected());
-                grupoRadios.getSelectedToggle();
+                //gruporadios.getSelectedToggle();
+                grupoRadios.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
+                    @Override
+                    public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
+                        Persona seleccionado = (Persona) newValue.getUserData();
+                        System.out.println(seleccionado.getEstado());
+                    }
+                });
             }
         });
 
