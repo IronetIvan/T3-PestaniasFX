@@ -1,5 +1,6 @@
 package controladora;
 
+import com.jfoenix.controls.JFXTextField;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -31,8 +32,17 @@ public class ControladoraVentana1 implements Initializable {
 
     ToggleGroup grupoRadios;
 
+    @FXML
+    JFXTextField textoMaterial;
+
+    @FXML
+    TextArea textoArea;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        
+        textoArea.setWrapText(true);
+        textoMaterial.setPromptText("Error el nombre no es correcto");
         instancias();
         acciones();
         personalizarBotones();
