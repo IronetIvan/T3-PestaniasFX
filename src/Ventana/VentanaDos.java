@@ -10,8 +10,10 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 
 public class VentanaDos extends Stage {
-
+    String titulo = null;
     public VentanaDos(String titulo) {
+
+        this.titulo = titulo;
         initGUI();
     }
 
@@ -25,8 +27,8 @@ public class VentanaDos extends Stage {
         }
         Scene scene = new Scene(root,300,300);
         ventadaAdicional.setScene(scene);
-        ventadaAdicional.setTitle("Adicional");
-        ventadaAdicional.initStyle(StageStyle.TRANSPARENT);
+        ventadaAdicional.setTitle(titulo);
+        ventadaAdicional.initStyle(StageStyle.DECORATED);
         ventadaAdicional.show();
     }
 }
