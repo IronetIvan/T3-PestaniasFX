@@ -7,6 +7,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.net.URL;
@@ -29,7 +30,10 @@ public class ControladoraSplash implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 VentanaUno ventanaUno = new VentanaUno();
+                Stage stage = (Stage) imagenFondo.getScene().getWindow();
+                stage.close();
             }
         });
+
     }
 }
