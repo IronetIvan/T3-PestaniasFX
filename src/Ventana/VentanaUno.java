@@ -6,19 +6,23 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class VentanaUno extends Application {
+import java.io.IOException;
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("../layout/layoutVentanaUno.fxml"));
+public class VentanaUno extends Stage {
 
+
+    public VentanaUno() {
+
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("../layout/layoutVentanaUno.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         Scene scene = new Scene(root, 600, 400);
-        primaryStage.setTitle("Pestañias JavaFX");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        this.setTitle("Pestañias JavaFX");
+        this.setScene(scene);
+        this.show();
     }
 
-    public void lanzarVentana() {
-        launch();
-    }
 }
