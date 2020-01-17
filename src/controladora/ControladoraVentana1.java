@@ -27,7 +27,7 @@ public class ControladoraVentana1 implements Initializable {
 
     DropShadow sombra = new DropShadow();
     @FXML
-    Button btnNormal, btnImagen, btnValidar;
+    Button btnNormal, btnImagen, btnPulsar;
     @FXML
     Tab tabBotones, tabTextos;
     @FXML
@@ -95,10 +95,11 @@ public class ControladoraVentana1 implements Initializable {
                 });
             }
         });
-        btnValidar.setOnAction(new EventHandler<ActionEvent>() {
+        btnPulsar.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                VentanaDos ventanaDos = new VentanaDos(textoMaterial.getText());
+
+                //VentanaDos ventanaDos = new VentanaDos(textoMaterial.getText());
             }
         });
 

@@ -1,6 +1,5 @@
 package Ventana;
 
-import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -21,7 +20,7 @@ public class VentanaDos extends Stage {
         Stage ventadaAdicional= new Stage();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("../layout/layoutVentadaDos.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../layout/VentanaDosSceneUno.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }

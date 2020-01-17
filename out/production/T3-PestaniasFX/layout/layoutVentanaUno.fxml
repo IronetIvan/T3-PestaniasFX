@@ -101,7 +101,7 @@
                            </GridPane.margin>
                         </TextArea>
                         <Label text="Texto Area" GridPane.rowIndex="2" />
-                        <Button fx:id="btnValidar" mnemonicParsing="false" text="Validar" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                        <Button fx:id="btnPulsar" mnemonicParsing="false" text="Validar" GridPane.columnSpan="2" GridPane.rowIndex="3" />
                      </children>
                   </GridPane>
                </content></Tab>
