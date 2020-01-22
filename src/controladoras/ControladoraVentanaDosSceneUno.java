@@ -1,4 +1,4 @@
-package controladora;
+package controladoras;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -17,23 +17,26 @@ import java.util.ResourceBundle;
 public class ControladoraVentanaDosSceneUno implements Initializable {
 
     @FXML
-    Button btnDos;
+    Button botonDos;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        btnDos.setOnAction(new EventHandler<ActionEvent>() {
+
+        botonDos.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
-                //System.out.println("Pulsado");
-                Stage stage = (Stage) btnDos.getScene().getWindow();
+                //System.out.println("pulsado");
+                Scene sceneActual= botonDos.getScene();
+                Stage stage = (Stage) sceneActual.getWindow();
                 Parent root = null;
                 try {
-                    root = FXMLLoader.load(getClass().getResource("../layout//VentanaDosSceneUno.fxml"));
+                    root = FXMLLoader.load(getClass()
+                            .getResource("../layouts/layout_ventana_dos_scene_dos.fxml"));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                Scene scene = new Scene(root,stage.getWidth(),stage.getHeight());
+
+                Scene scene = new Scene(root, sceneActual.getWidth(),sceneActual.getHeight());
                 stage.setScene(scene);
             }
         });
