@@ -156,7 +156,29 @@
                   </BorderPane>
                </content>
             </Tab>
+            <Tab text="Estilos">
+               <content>
+                  <BorderPane opacity="0.51" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: ; -fx-font-size: 30px; -fx-background-color: 0FDC9A;">
+                     <center>
+                        <Label text="Ejemplo de texto" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </BorderPane.margin>
+                        </Label>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
         </tabs>
       </TabPane>
    </center>
+   <bottom>
+      <FlowPane alignment="CENTER" hgap="20.0" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="bAgregar" mnemonicParsing="false" text="Agregar" />
+            <Button fx:id="bBorrar" mnemonicParsing="false" text="Borrar" />
+            <Button fx:id="bObtener" mnemonicParsing="false" text="Obtener" />
+         </children>
+      </FlowPane>
+   </bottom>
 </BorderPane>
